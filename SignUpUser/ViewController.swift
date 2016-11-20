@@ -10,11 +10,62 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var states : [String] = [" New york", "las vegas"]
+    var states = ["Alabama",
+                  "Alaska",
+                  "Arizona",
+                  "Arkansas",
+                  "California",
+                  "Colorado",
+                  "Connecticut",
+                  "Delaware",
+                  "Florida",
+                  "Georgia",
+                  "Hawaii",
+                  "Idaho",
+                  "Illinois",
+                  "Indiana",
+                  "Iowa",
+                  "Kansas",
+                  "Kentucky",
+                  "Louisiana",
+                  "Maine",
+                  "Maryland",
+                  "Massachusetts",
+                  "Michigan",
+                  "Minnesota",
+                  "Mississippi",
+                  "Missouri",
+                  "Montana",
+                  "Nebraska",
+                  "Nevada",
+                  "New Hampshire",
+                  "New Jersey",
+                  "New Mexico",
+                  "New York",
+                  "North Carolina",
+                  "North Dakota",
+                  "Ohio",
+                  "Oklahoma",
+                  "Oregon",
+                  "Pennsylvania",
+                  "Rhode Island",
+                  "South Carolina",
+                  "South Dakota",
+                  "Tennessee",
+                  "Texas",
+                  "Utah",
+                  "Vermont",
+                  "Virginia",
+                  "Washington",
+                  "West Virginia",
+                  "Wisconsin",
+                  "Wyoming"]
+    
     @IBOutlet var userNameLabel: UITextField!
     
     @IBOutlet var emailText: UITextField!
     
+    @IBOutlet var selectStateBtn: UIButton!
     
     @IBOutlet var pickerView: UIPickerView!
 
@@ -30,6 +81,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
 
     @IBAction func selectStateTapped(_ sender: Any) {
+        
+        pickerView.isHidden = false
         
     }
 
@@ -49,11 +102,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let state = states[row]
+        // not the best way
+       // selectStateBtn.setTitle(state, for: [])
+        
         
         return state
     }
     
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let state = states[row]
+        
+        selectStateBtn.setTitle(state, for: .normal)
+        //pickerView.isHidden = true
+    }
     
 }
 

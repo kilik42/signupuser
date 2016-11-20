@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEy-3h-mBf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEy-3h-mBf">
                                 <rect key="frame" x="139" y="199" width="98" height="34"/>
                                 <color key="backgroundColor" red="0.1613865675041638" green="0.65891599313872873" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Select State"/>
@@ -93,12 +93,14 @@
                             <constraint firstItem="cbi-iQ-ZVU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pS3-zk-Soj"/>
                             <constraint firstItem="6dp-v9-ZIg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-5.5" id="qg8-X2-vgN"/>
                             <constraint firstItem="6dp-v9-ZIg" firstAttribute="top" secondItem="oNL-12-wsi" secondAttribute="bottom" constant="8" id="t91-Dk-Ehv"/>
+                            <constraint firstItem="jEy-3h-mBf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vfr-Yx-LTv"/>
                             <constraint firstItem="Tkq-KD-rax" firstAttribute="top" secondItem="jEy-3h-mBf" secondAttribute="bottom" constant="8" id="x7T-LF-13Z"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailText" destination="4iI-Nj-aCP" id="m0j-Jd-T2E"/>
                         <outlet property="pickerView" destination="Tkq-KD-rax" id="Gwy-j1-Na6"/>
+                        <outlet property="selectStateBtn" destination="jEy-3h-mBf" id="pQo-BR-pej"/>
                         <outlet property="userNameLabel" destination="6dp-v9-ZIg" id="Z9H-Yj-KlT"/>
                     </connections>
                 </viewController>
