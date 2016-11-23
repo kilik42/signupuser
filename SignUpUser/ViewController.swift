@@ -76,6 +76,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         pickerView.delegate = self
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyBoard))
+        view.addGestureRecognizer(tap)
+        
     }
 
     
@@ -116,6 +120,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         selectStateBtn.setTitle(state, for: .normal)
         //pickerView.isHidden = true
     }
+    
+    func dismissKeyBoard(){
+        view.endEditing(true)
+        
+    }
+    
     
 }
 
